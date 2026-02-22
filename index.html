@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+    <!-- fontAwsome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind + daisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-9/12 mx-auto bg-[#F8FAFC]">
+    <header class="pt-14">
+        <h1 class="font-bold text-[#002C5C] text-3xl">Job Application Tracker</h1>
+        <!-- header card -->
+        <div class="flex justify-between gap-9 pt-5">
+            <div class="bg-white p-5 w-80 rounded-lg border border-[#F1F2F4]">
+                <p class="text-xs font-medium text-[#323B49]">Total</p>
+                <h2 class="font-bold text-[#002C5C] text-2xl">8</h2>
+            </div>
+            <div class="bg-white p-5 w-80 rounded-lg border border-[#F1F2F4]">
+                <p class="text-xs font-medium text-[#323B49]">Interview</p>
+                <h2 class="font-bold text-success text-2xl">0</h2>
+            </div>
+            <div class="bg-white p-5 w-80 rounded-lg border border-[#F1F2F4]">
+                <p class="text-xs font-medium text-[#323B49]">Rejected</p>
+                <h2 class="font-bold text-error text-2xl">0</h2>
+            </div>
+        </div>
+    </header>
+    <span class="text-[#E6E7E9] m-8"><hr></span>
+
+    <section class="">
+        <!-- available job -->
+        <div class="flex justify-between">
+            <h2 class="text-[#002C5C] font-semibold text-xl">Available Jobs</h2>
+            <p class="text-[#64748B] font-medium text-[16px]">8 jobs</p>
+        </div>
+        <!-- job stutus -->
+        <div class="flex gap-2 mt-6">
+            <p class="text-[#FFFFFF] bg-info py-2 px-10 rounded-md border border-[#F1F2F4]">All</p>
+            <p class="text-[#64748B] bg-white border-1 border-[#F1F2F4] py-2 px-4 rounded-md">Interview</p>
+            <p class="text-[#64748B] bg-white border border-[#F1F2F4]  py-2 px-4 rounded-md">Rejected</p>
+        </div>
+        <!-- job lists -->
+        <div class="flex mt-4 p-6 justify-between rounded-lg bg-white border border-[#F1F2F4]">
+            <div>
+            <h2 class="text-[#002C5C] font-semibold text-[18px]">Mobile First Corp</h2>
+            <p class="text-[#64748B] text-[16px]">React Native Developer</p>
+            <p class="py-5 text-[#64748B] text-[14px]">Remote • Full-time • $130,000 - $175,000</p>
+            <p class="pb-2 text-[14px] font-semibold text-[#002C5C] bg-[#EEF4FF] w-28 text-center px-3 py-2 rounded-md">Not Applied</p>
+            <p class="pb-5 text-[#323B49] text-[14px] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+            <button class="btn btn-outline btn-success w-24 font-semibold hover:text-white text-[14px]
+            ">Interview</button>
+            <button class="btn btn-outline btn-error w-24 font-semibold ml-2 hover:text-white text-[14px]">Rejected</button>
+            </div>
+            <div>
+                <i class="fa-solid fa-trash-can"></i>  
+            </div>
+        </div>
+    </section>
+</body>
+</html>
