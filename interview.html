@@ -40,15 +40,20 @@
         </div>
         <!-- job stutus -->
         <div class="flex gap-2 mt-6">
-            <p class="text-[#FFFFFF] bg-info py-2 px-10 rounded-md border border-[#F1F2F4]">All</p>
-            <p class="text-[#64748B] bg-white border-1 border-[#F1F2F4] py-2 px-4 rounded-md">Interview</p>
+            <p id="all-status" class="text-[#64748B] bg-white py-2 px-10 rounded-md border border-[#F1F2F4] cursor-pointer">All</p>
+            <p id="" class=" text-white  border-1 border-[#F1F2F4] py-2 px-4 rounded-md bg-info">Interview</p>
             <p class="text-[#64748B] bg-white border border-[#F1F2F4]  py-2 px-4 rounded-md">Rejected</p>
         </div>
-        <div class="mt-5 bg-white border border-[#F1F2F4] p-6 rounded-lg text-center py-20">
+        <div id="no-job-available" class="mt-5 bg-white border border-[#F1F2F4] p-6 rounded-lg text-center py-20">
             <i class="fa-regular fa-file-lines fa-5x text-info"></i>
             <h2 class="font-semibold text-[#002C5C] text-2xl mt-5">No jobs available</h2>
             <p class="text-[#64748B] text-[16px]">Check back soon for new job opportunities</p>
         </div>
+        <div id="added-intervew">
+
+        </div>
     </section>
+    <script src="toogle.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

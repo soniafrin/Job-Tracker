@@ -17,11 +17,11 @@
         <div class="flex justify-between gap-9 pt-5">
             <div class="bg-white p-5 w-80 rounded-lg border border-[#F1F2F4]">
                 <p class="text-xs font-medium text-[#323B49]">Total</p>
-                <h2 class="font-bold text-[#002C5C] text-2xl">8</h2>
+                <h2 id="total-jobs" class="font-bold text-[#002C5C] text-2xl">8</h2>
             </div>
             <div class="bg-white p-5 w-80 rounded-lg border border-[#F1F2F4]">
                 <p class="text-xs font-medium text-[#323B49]">Interview</p>
-                <h2 class="font-bold text-success text-2xl">0</h2>
+                <h2 id="total-interview" class="font-bold text-success text-2xl">0</h2>
             </div>
             <div class="bg-white p-5 w-80 rounded-lg border border-[#F1F2F4]">
                 <p class="text-xs font-medium text-[#323B49]">Rejected</p>
@@ -40,25 +40,28 @@
         <!-- job stutus -->
         <div class="flex gap-2 mt-6">
             <p class="text-[#FFFFFF] bg-info py-2 px-10 rounded-md border border-[#F1F2F4]">All</p>
-            <p class="text-[#64748B] bg-white border-1 border-[#F1F2F4] py-2 px-4 rounded-md">Interview</p>
+            <p id="interview-status" class="text-[#64748B] bg-white border-1 border-[#F1F2F4] py-2 px-4 rounded-md cursor-pointer">Interview</p>
             <p class="text-[#64748B] bg-white border border-[#F1F2F4]  py-2 px-4 rounded-md">Rejected</p>
         </div>
         <!-- job lists -->
-        <div class="flex mt-4 p-6 justify-between rounded-lg bg-white border border-[#F1F2F4]">
-            <div>
+        <div id="job-list" class="flex mt-4 p-6 justify-between rounded-lg bg-white border border-[#F1F2F4]">
+            <div >
             <h2 class="text-[#002C5C] font-semibold text-[18px]">Mobile First Corp</h2>
             <p class="text-[#64748B] text-[16px]">React Native Developer</p>
             <p class="py-5 text-[#64748B] text-[14px]">Remote • Full-time • $130,000 - $175,000</p>
-            <p class="pb-2 text-[14px] font-semibold text-[#002C5C] bg-[#EEF4FF] w-28 text-center px-3 py-2 rounded-md">Not Applied</p>
+            <p id="not-applied" class="pb-2 text-[14px] font-semibold text-[#002C5C] bg-[#EEF4FF] w-28 text-center px-3 py-2 rounded-md">Not Applied</p>
             <p class="pb-5 text-[#323B49] text-[14px] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-            <button class="btn btn-outline btn-success w-24 font-semibold hover:text-white text-[14px]
+            <button id="intBtn" class="btn btn-outline btn-success w-24 font-semibold hover:text-white text-[14px]
             ">Interview</button>
             <button class="btn btn-outline btn-error w-24 font-semibold ml-2 hover:text-white text-[14px]">Rejected</button>
             </div>
             <div>
-                <i class="fa-solid fa-trash-can"></i>  
+                  <i class="fa-solid fa-trash-can"></i>  
             </div>
         </div>
     </section>
+    <script src="toogle.js"></script>
+    <script src="script.js"></script>
+    <script src="utilities.js"></script>
 </body>
 </html>
