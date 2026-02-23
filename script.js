@@ -1,16 +1,41 @@
-const int_Btn =document.querySelectorAll(".intBtn")
-    if(int_Btn){
-int_Btn.addEventListener("click", function(){
-    const total_Jobs = document.getElementById("total-jobs").innerText
-    mul("total-jobs");
+const interviewList = []
+let rejectList = []
 
-    const total_interview = document.getElementById("total-interview").innerText
-    sum("total-interview");
+const totalCount = document.getElementById("total-jobs")
+const interviewCount = document.getElementById("total-interview")
+const rejectCount = document.getElementById("total-reject")
+
+// access to job list 
+const jobLists = document.getElementById("job-lists")
+
+// acces to mainContainer
+const mainContainer = document.querySelector("main")
+// job counts
+function total(){
+    totalCount.innerText = jobLists.children.length
+    interviewCount.innerText = interviewList.length
+    rejectCount.innerText = rejectList.length
+
+}
+total()
+
+mainContainer.document.getElementById
+
+// const int_Btn =document.getElementById("intBtn")
+//     if(int_Btn){
+// int_Btn.addEventListener("click", function(){
+//     const total_Jobs = document.getElementById("total-jobs").innerText
+//     mul("total-jobs");
+
+//     const total_interview = document.getElementById("total-interview").innerText
+//     sum("total-interview");
    
-    const applicationStatus = document.getElementById("not-applied");
-    applicationStatus.innerText = "Interview"
-    applicationStatus.classList.add("btn", "btn-success", "btn-outline", "text-success")
-    applicationStatus.classList.remove("bg-[#EEF4FF]", "text-[#002C5C]")
+//     const applicationStatus = document.getElementById("not-applied");
+//     applicationStatus.innerText = "Interview"
+//     applicationStatus.classList.add("btn", "btn-success", "btn-outline", "text-success")
+//     applicationStatus.classList.remove("bg-[#EEF4FF]", "text-[#002C5C]")
+//     int_Btn.disabled = true;
+
 
 //     const addingInt = document.getElementById("addedToInterview");
 //     const newDiv = document.createElement("div");
@@ -22,7 +47,7 @@ int_Btn.addEventListener("click", function(){
 //             <p class="py-5 text-[#64748B] text-[14px]">Remote • Full-time • $130,000 - $175,000</p>
 //             <p id="not-applied" class="pb-2 text-[14px] font-semibold text-[#002C5C] bg-[#EEF4FF] w-28 text-center px-3 py-2 rounded-md">Not Applied</p>
 //             <p class="pb-5 text-[#323B49] text-[14px] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-//             <button id="" class="intBtn btn btn-outline btn-success w-24 font-semibold hover:text-white text-[14px]">Interview</button>
+//             <button id="intBtn" class=" btn btn-outline btn-success w-24 font-semibold hover:text-white text-[14px]">Interview</button>
 //             <button class="btn btn-outline btn-error w-24 font-semibold ml-2 hover:text-white text-[14px]">Rejected</button>
 //             </div>
 //             <div>
@@ -34,7 +59,6 @@ int_Btn.addEventListener("click", function(){
 //     addingInt.appendChild(newDiv);
 //     addingInt.classList.add("hidden");
 
-//     int_Btn.disabled = true;
     
 
 // const intStatus = document.getElementById("interview-status")
@@ -59,6 +83,6 @@ int_Btn.addEventListener("click", function(){
 // })
 
 
-})}
+// })}
 
     
