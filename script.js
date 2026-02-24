@@ -31,7 +31,7 @@ mainContainer.addEventListener("click", function(e){
     const jobsalary = parentNode.querySelector(".job-salary").innerText
     const applicationStatus = parentNode.querySelector(".application-status").innerText
     const jobDescription = parentNode.querySelector(".job-description").innerText
-//    console.log(jobtitle, jobPost, jobsalary,applicationStatus, jobDescription )
+    
 const jobInfo = {
     jobtitle, 
     jobPost, 
@@ -62,15 +62,13 @@ function renderInteview(){
     for(interview of interviewList){
         const newDiv = document.createElement("div");
          const newbadge = document.querySelector(".application-status").innerText = "Interview"
-    // newbadge.classList.add("btn", "btn-success", "btn-outline", "text-success")
-    // newDiv.classList.add("newIntDiv")
     newDiv.innerHTML =`<div id="job-list" class="flex mt-4 p-6 justify-between rounded-lg bg-white border border-[#F1F2F4]">
             <div >
-            <h2 class="text-[#002C5C] font-semibold text-[18px]">Mobile First Corp</h2>
-            <p class="text-[#64748B] text-[16px]">React Native Developer</p>
-            <p class="py-5 text-[#64748B] text-[14px]">Remote • Full-time • $130,000 - $175,000</p>
+            <h2 class="text-[#002C5C] font-semibold text-[18px]">${interview.jobtitle}</h2>
+            <p class="text-[#64748B] text-[16px]">${interview.jobPost}</p>
+            <p class="py-5 text-[#64748B] text-[14px]">${interview.jobsalary}</p>
             <p id="not-applied" class="pb-2 text-[14px] font-semibold btn-success btn-outline border text-success w-28 text-center px-3 py-2 rounded-md">${newbadge}</p>
-            <p class="pb-5 text-[#323B49] text-[14px] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+            <p class="pb-5 text-[#323B49] text-[14px] mt-2">${interview.jobDescription}</p>
             <button id="intBtn" class=" btn btn-outline btn-success w-24 font-semibold hover:text-white text-[14px]">Interview</button>
             <button class="btn btn-outline btn-error w-24 font-semibold ml-2 hover:text-white text-[14px]">Rejected</button>
             </div>

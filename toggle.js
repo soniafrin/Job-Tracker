@@ -66,12 +66,12 @@ function toggleChange(id){
         availableJob.classList.add("hidden")
         addingInt.classList.remove("hidden")
     }
-    else if(id == "resect-status"){
-        jobLists.classList.add("hidden")
-        availableJob.classList.add("hidden")
-        // addingInt.classList.remove("hidden")
+    // else if(id == "resect-status"){
+    //     jobLists.classList.add("hidden")
+    //     availableJob.classList.add("hidden")
+    //     // addingInt.classList.remove("hidden")
 
-    }
+    // }
     
 }
 // if(id == "interview-status"){
