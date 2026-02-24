@@ -43,7 +43,7 @@
 // })
 
 const jobStatus = document.querySelectorAll(".job-status")
-const jobList = document.getElementById("job-list")
+// const jobLists = document.getElementById("job-lists")
 const availableJob = document.getElementById("no-job-available")
 function toggleChange(id){
     jobStatus.forEach(btnn =>{
@@ -56,13 +56,29 @@ function toggleChange(id){
         clickedBtn.classList.remove("text-[#64748B]", "bg-white")
         clickedBtn.classList.add("text-[#FFFFFF]", "bg-info")
     if(id === "all-status"){
-        jobList.classList.remove("hidden")
+        jobLists.classList.remove("hidden")
         availableJob.classList.add("hidden")
-    } else {
-        jobList.classList.add("hidden")
-        availableJob.classList.remove("hidden")
+        addingInt.classList.add("hidden")
+
+
+    } else if (id == "interview-status") {
+        jobLists.classList.add("hidden")
+        availableJob.classList.add("hidden")
+        addingInt.classList.remove("hidden")
     }
+    else if(id == "resect-status"){
+        jobLists.classList.add("hidden")
+        availableJob.classList.add("hidden")
+        // addingInt.classList.remove("hidden")
+
+    }
+    
 }
+// if(id == "interview-status"){
+//             jobLists.classList.add("hidden")
+//             availableJob.classList.remove("hidden")
+
+//         }
 
 
 
