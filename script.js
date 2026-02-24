@@ -19,7 +19,29 @@ function total(){
 }
 total()
 
-mainContainer.document.getElementById
+// event delegation to main container 
+mainContainer.addEventListener("click", function(e){
+    const parentNode = e.target.parentNode.parentNode;
+    const jobtitle = parentNode.querySelector(".job-title").innerText
+    const jobPost = parentNode.querySelector(".job-post").innerText
+    const jobsalary = parentNode.querySelector(".job-salary").innerText
+    const applicationStatus = parentNode.querySelector(".application-status").innerText
+    const jobDescription = parentNode.querySelector(".job-description").innerText
+//    console.log(jobtitle, jobPost, jobsalary,applicationStatus, jobDescription )
+const jobInfo = {
+    jobtitle, 
+    jobPost, 
+    jobsalary,
+    applicationStatus, 
+    jobDescription
+}
+
+const ifInfoExist = interviewList.find(i => i.jobtitle == jobInfo.jobtitle)
+if(!ifInfoExist){
+    interviewList.push(jobInfo)
+}
+console.log(interviewList)
+})
 
 // const int_Btn =document.getElementById("intBtn")
 //     if(int_Btn){
