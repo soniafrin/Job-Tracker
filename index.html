@@ -31,11 +31,11 @@
     </header>
     <span class="text-[#E6E7E9] m-8"><hr></span>
 
-    <main id="">
+    <main id="main-container">
         <!-- available job -->
         <div class="flex justify-between">
             <h2 class="text-[#002C5C] font-semibold text-xl">Available Jobs</h2>
-            <p class="text-[#64748B] font-medium text-[16px]">8 jobs</p>
+            <p class="text-[#64748B] font-medium text-[16px]"><span id="available-job">8</span> jobs</p>
         </div>
         <!-- job stutus -->
         <div class="flex gap-2 mt-6">
@@ -44,19 +44,20 @@
             <p onclick="toggleChange('reject')" id="reject-status" class="job-status text-[#64748B] bg-white border border-[#F1F2F4]  py-2 px-4 rounded-md cursor-pointer">Rejected</p>
         </div>
         <!-- no-job-available -->
-         <div id="no-job-available" class=" hidden mt-5 bg-white border border-[#F1F2F4] p-6 rounded-lg text-center py-20">
+         <div id="no-job-available" class="hidden mt-5 bg-white border border-[#F1F2F4] p-6 rounded-lg text-center py-20">
             <i class="fa-regular fa-file-lines fa-5x text-info"></i>
             <h2 class="font-semibold text-[#002C5C] text-2xl mt-5">No jobs available</h2>
             <p class="text-[#64748B] text-[16px]">Check back soon for new job opportunities</p>
         </div>
         <!-- newaddeddiv -->
-         <section id="addedToInterview" class="hidden"></section>
+         <section id="addedToInterview" class="hidden">
+         </section>
          <section id="addedToReject" class="hidden">
          </section>
          <!-- job lists -->
-         <section id="job-lists">
+         <section id="job-lists" class="hidden">
          <!-- job list -->
-             <div class="flex mt-4 p-6 justify-between rounded-lg bg-white border border-[#F1F2F4]">
+             <div class="flex flex-row mt-4 p-6 justify-between rounded-lg bg-white border border-[#F1F2F4] card">
                  <div >
                     <h2 class="job-title text-[#002C5C] font-semibold text-[18px]">Mobile First Corp</h2>
                     <p class="job-post text-[#64748B] text-[16px]">React Native Developer</p>
@@ -68,9 +69,25 @@
                      <button class="reject-btn btn btn-outline btn-error w-24 font-semibold ml-2 hover:text-white text-[14px]">Rejected</button>
                     </div>
                  </div>
+                <div class="cursor-pointer">
+                    <i class="delete-btn fa-solid fa-trash-can"></i>  
+                </div>
+             </div>
+             <div class="flex-row mt-4 p-6 justify-between rounded-lg bg-white border border-[#F1F2F4] card">
+                 <div >
+                    <h2 class="job-title text-[#002C5C] font-semibold text-[18px]">Webflow Technology</h2>
+                    <p class="job-post text-[#64748B] text-[16px]">Web developer</p>
+                    <p class="job-salary py-5 text-[#64748B] text-[14px]">Remote • Full-time • $130,000 - $175,000</p>
+                    <p class="application-status  pb-2 text-[14px] font-semibold text-[#002C5C] bg-[#EEF4FF] w-28 text-center px-3 py-2 rounded-md">Not Applied</p>
+                    <p class="job-description pb-5 text-[#323B49] text-[14px] mt-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div>
-                       <i class="fa-solid fa-trash-can"></i>  
+                     <button class="interview-btn btn btn-outline btn-success w-24 font-semibold hover:text-white text-[14px]">Interview</button>
+                     <button class="reject-btn btn btn-outline btn-error w-24 font-semibold ml-2 hover:text-white text-[14px]">Rejected</button>
                     </div>
+                 </div>
+                <div class="cursor-pointer">
+                    <i class="delete-btn fa-solid fa-trash-can"></i>  
+                </div>
              </div>
              
         </section>
