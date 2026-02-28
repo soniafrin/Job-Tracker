@@ -42,38 +42,42 @@
 //     availableJob.classList.remove("hidden")
 // })
 
-const jobStatus = document.querySelectorAll(".job-status")
-// const jobLists = document.getElementById("job-lists")
-const availableJob = document.getElementById("no-job-available")
-function toggleChange(id){
-    jobStatus.forEach(btnn =>{
-        btnn.classList.add("text-[#64748B]", "bg-white")
-        btnn.classList.remove("text-[#FFFFFF]", "bg-info")
-    })
+// const jobStatus = document.querySelectorAll(".job-status")
+// // const jobLists = document.getElementById("job-lists")
+// const availableJob = document.getElementById("no-job-available")
+// function toggleChange(id){
+//     jobStatus.forEach(btnn =>{
+//         btnn.classList.add("text-[#64748B]", "bg-white")
+//         btnn.classList.remove("text-[#FFFFFF]", "bg-info")
+//     })
     
-    const clickedBtn = document.getElementById(id)
-    // console.log(clickedBtn)
-        clickedBtn.classList.remove("text-[#64748B]", "bg-white")
-        clickedBtn.classList.add("text-[#FFFFFF]", "bg-info")
-    if(id === "all-status"){
-        jobLists.classList.remove("hidden")
-        availableJob.classList.add("hidden")
-        addingInt.classList.add("hidden")
+//     const clickedBtn = document.getElementById(id)
+//      currentStatus = id
+//     // console.log(clickedBtn)
+//         clickedBtn.classList.remove("text-[#64748B]", "bg-white")
+//         clickedBtn.classList.add("text-[#FFFFFF]", "bg-info")
+//     if(id === "all-status"){
+//         jobLists.classList.remove("hidden")
+//         availableJob.classList.add("hidden")
+//         addingInt.classList.add("hidden")
+//         renderInteview()
 
 
-    } else if (id == "interview-status") {
-        jobLists.classList.add("hidden")
-        availableJob.classList.add("hidden")
-        addingInt.classList.remove("hidden")
-    }
-    // else if(id == "resect-status"){
-    //     jobLists.classList.add("hidden")
-    //     availableJob.classList.add("hidden")
-    //     // addingInt.classList.remove("hidden")
+//     } else if (id == "interview-status") {
+//         jobLists.classList.add("hidden")
+//         availableJob.classList.add("hidden")
+//         addingInt.classList.remove("hidden")
+//     }
+//     else if(id == "reject-status"){
+//         jobLists.classList.add("hidden")
+//         availableJob.classList.add("hidden")
+//         addingRej.classList.remove("hidden")
+//         renderReject()
+        
 
-    // }
+//     }
     
-}
+// }
 // if(id == "interview-status"){
 //             jobLists.classList.add("hidden")
 //             availableJob.classList.remove("hidden")
