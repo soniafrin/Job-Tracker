@@ -22,9 +22,10 @@ function toggleChange(tab){
         else{
             tabName.classList.add(...inactiveTab)
             tabName.classList.remove(...activeTab)
-            rejectSection.children.length
+            // rejectSection.children.length
         }
     }
+    // toggleChange()
 
     const sections = [interviewSection, rejectSection, joblistsSection]
 for(let section of sections){
@@ -34,24 +35,20 @@ for(let section of sections){
 
     if(tab == "all"){
         joblistsSection.classList.remove("hidden")
-        updateStatus()
+        // updateStatus()
         if(joblistsSection.children.length < 1){
             noAvailableJob.classList.remove("hidden")
-            
         }
-
     }
     else if(tab == "interview"){
-        avaiableJob.innerHTML = interviewSection.children.length
         interviewSection.classList.remove("hidden")
+        // avaiableJob.innerHTML = interviewSection.children.length
         if(interviewSection.children.length < 1){
             noAvailableJob.classList.remove("hidden")
         }
-    
-
     }
     else{
-        avaiableJob.innerHTML = rejectSection.children.length
+        // avaiableJob.innerHTML = rejectSection.children.length
         rejectSection.classList.remove("hidden")
         if(rejectSection.children.length < 1){
             noAvailableJob.classList.remove("hidden")
@@ -59,7 +56,7 @@ for(let section of sections){
         }
     }
         
-
+updateStatus()
 
 }
 // status update
@@ -74,17 +71,18 @@ function updateStatus(){
     // totalJob.innerHTML = joblistsSection.children.length
     // totalInterview.innerHTML = interviewSection.children.length
     // totalReject.innerHTML = rejectSection.children.length
-    avaiableJob.innerHTML = joblistsSection.children.length
+    // avaiableJob.innerHTML = joblistsSection.children.length
     
     const counts = {
         all: joblistsSection.children.length,
         interview: interviewSection.children.length,
         reject: rejectSection.children.length
+
     }
     totalJob.innerHTML = counts.all;
     totalInterview.innerHTML = counts.interview;
     totalReject.innerHTML = counts.reject;
-    // noAvailableJob.innerText = counts[currentTab];
+    avaiableJob.innerText = counts[currentTab];
     // console.log(noAvailableJob.innerText)
     if(counts[currentTab] < 1){
         noAvailableJob.classList.remove("hidden")
@@ -95,7 +93,11 @@ updateStatus()
 document.getElementById("main-container").addEventListener("click", function(e){
     const targatedElement = e.target
     const card = targatedElement.closest(".card")
+    if(!card){
+        return;
+    }
     const cardParent = card.parentNode;
+    // console.log(cardParent)
     const applicationStatus = card.querySelector(".application-status")
     
     // console.log(applicationStatus)
@@ -107,7 +109,7 @@ document.getElementById("main-container").addEventListener("click", function(e){
         updateStatus()
     }
      if(targatedElement.classList.contains("reject-btn")){
-        applicationStatus.innerText = "Reject"
+        applicationStatus.innerText = "Rejected"
         applicationStatus.classList.remove("bg-[#EEF4FF]", "text-[#002C5C]")
         applicationStatus.classList.add("btn", "btn-error", "btn-outline", "text-error")
         rejectSection.appendChild(card)
