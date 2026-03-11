@@ -1,3 +1,92 @@
+A web application to track and manage job applications efficiently.
+Tech Stack: HTML • CSS • Tailwind CSS • JavaScript
+Live Demo: [Job Tracker](https://soniafrin.github.io/Job-Tracker/)
+
+## Features
+* Add, edit, and delete job entries
+* Responsive design for mobile and desktop
+* Interactive UI with real-time updates
+
+## What I Learned
+* DOM manipulation and event handling in JavaScript
+* Building responsive layouts with Tailwind CSS
+* Deploying projects on GitHub Pages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Answers to Questions
 
